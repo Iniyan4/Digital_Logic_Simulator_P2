@@ -48,7 +48,7 @@ public class WorkspaceManager {
             Dragboard db = event.getDragboard();
             boolean success = false;
             if (db.hasString()) {
-                createAndAddGate(db.getString(), event.getX(), event.getY());
+                createGate(db.getString(), event.getX(), event.getY());
                 success = true;
             }
             event.setDropCompleted(success);
@@ -69,17 +69,17 @@ public class WorkspaceManager {
 
     //Gate Creation
 
-    public GateView createAndAddGate(String gateType, double x, double y) {
+    public GateView createGate(String gateType, double x, double y) {
         if (gateType.startsWith("CUSTOM:")) {
             createCustomGateFromTemplate(gateType.substring("CUSTOM:".length()), x, y);
             return null;
         }
         double newX = x - (GateView.GATE_WIDTH / 2.0);
         double newY = y - (GateView.GATE_HEIGHT / 2.0);
-        return createAndAddGate(gateType, newX, newY, UUID.randomUUID().toString());
+        return createGate(gateType, newX, newY, UUID.randomUUID().toString());
     }
 
-    public GateView createAndAddGate(String gateType, double x, double y, String id) {
+    public GateView createGate(String gateType, double x, double y, String id) {
         Gate model;
         String baseLabel;
 
@@ -120,7 +120,7 @@ public class WorkspaceManager {
         }
 
         for (GateSaveData d : template.getInternalGates()) {
-            GateView newGate = createAndAddGate(d.getGateType(), dropX + (d.getX() - baseX), dropY + (d.getY() - baseY), UUID.randomUUID().toString());
+            GateView newGate = createGate(d.getGateType(), dropX + (d.getX() - baseX), dropY + (d.getY() - baseY), UUID.randomUUID().toString());
             if (d.getCustomLabel() != null) newGate.setCustomLabel(d.getCustomLabel());
             newGates.add(newGate);
             oldIdMap.put(d.getId(), newGate);
