@@ -53,7 +53,6 @@ public class SimulatorApp extends Application {
 
     /**
      * Builds and displays the Front Page / Welcome Screen.
-     * Changed to PUBLIC so PaletteManager can access it.
      */
     public void showWelcomeScreen() {
         VBox welcomeLayout = new VBox(20);
