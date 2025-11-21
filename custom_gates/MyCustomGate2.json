@@ -1,0 +1,48 @@
+{
+  "gateName" : "MyCustomGate2",
+  "internalGates" : [ {
+    "id" : "4f3740c8-7ae7-43aa-9bd8-fba2f896d5c8",
+    "gateType" : "OR_GATE",
+    "x" : 180.0,
+    "y" : 276.6,
+    "customLabel" : ""
+  }, {
+    "id" : "8c16f88d-9b02-4c8e-847c-91866eead310",
+    "gateType" : "AND_GATE",
+    "x" : 168.8,
+    "y" : 200.6,
+    "customLabel" : ""
+  } ],
+  "internalWires" : [ ],
+  "mappings" : [ {
+    "exposedName" : "In-1",
+    "direction" : "IN",
+    "internalGateId" : "4f3740c8-7ae7-43aa-9bd8-fba2f896d5c8",
+    "internalPinType" : "A"
+  }, {
+    "exposedName" : "In-1",
+    "direction" : "IN",
+    "internalGateId" : "4f3740c8-7ae7-43aa-9bd8-fba2f896d5c8",
+    "internalPinType" : "B"
+  }, {
+    "exposedName" : "Out-1",
+    "direction" : "OUT",
+    "internalGateId" : "4f3740c8-7ae7-43aa-9bd8-fba2f896d5c8",
+    "internalPinType" : "OUT"
+  }, {
+    "exposedName" : "In-1",
+    "direction" : "IN",
+    "internalGateId" : "8c16f88d-9b02-4c8e-847c-91866eead310",
+    "internalPinType" : "A"
+  }, {
+    "exposedName" : "In-1",
+    "direction" : "IN",
+    "internalGateId" : "8c16f88d-9b02-4c8e-847c-91866eead310",
+    "internalPinType" : "B"
+  }, {
+    "exposedName" : "Out-2",
+    "direction" : "OUT",
+    "internalGateId" : "8c16f88d-9b02-4c8e-847c-91866eead310",
+    "internalPinType" : "OUT"
+  } ]
+}
