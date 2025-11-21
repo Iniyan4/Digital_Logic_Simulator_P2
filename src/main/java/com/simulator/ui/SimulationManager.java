@@ -48,7 +48,7 @@ public class SimulationManager {
     }
 
     /**
-     * NEW: Clears the truth table UI.
+     * Clears the truth table UI.
      */
     public void clearTruthTable() {
         truthTable.getColumns().clear();
@@ -108,8 +108,7 @@ public class SimulationManager {
         for (int i = 0; i < numRows; i++) {
             boolean[] rowData = new boolean[numInputs + numOutputs];
             for (int j = 0; j < numInputs; j++) {
-                // MODIFIED: Reverse bit order so first column is MSB (slowest change)
-                // Old: boolean state = ((i >> j) & 1) == 1;
+                //Reverse bit order so first column is MSB (slowest change)
                 boolean state = ((i >> (numInputs - 1 - j)) & 1) == 1;
 
                 Gate model = inputs.get(j).getGateModel();
