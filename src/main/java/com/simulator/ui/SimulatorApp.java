@@ -167,7 +167,7 @@ public class SimulatorApp extends Application {
     //Delegators (Exposed for Interaction)
 
     public GateView createAndAddGate(String gateType, double x, double y, String id) {
-        return workspaceManager.createAndAddGate(gateType, x, y, id);
+        return workspaceManager.createGate(gateType, x, y, id);
     }
 
     public void toggleSelectItem(Node item, boolean isShiftDown) {
